@@ -1,0 +1,1543 @@
+1
+00:00:00,299 --> 00:00:01,299
+hello guys so my name is krushnayak and
+
+2
+00:00:02,580 --> 00:00:03,580
+welcome to my YouTube channel so guys uh
+
+3
+00:00:04,860 --> 00:00:05,860
+we will continue the end-to-end machine
+
+4
+00:00:07,379 --> 00:00:08,379
+learning project series now uh you know
+
+5
+00:00:10,440 --> 00:00:11,440
+till now I have uploaded nine tutorials
+
+6
+00:00:12,540 --> 00:00:13,540
+uh I have to probably rename this uh
+
+7
+00:00:15,000 --> 00:00:16,000
+Project Playlist not seven days but
+
+8
+00:00:16,740 --> 00:00:17,740
+it'll be more now because since I'm
+
+9
+00:00:18,539 --> 00:00:19,539
+going to add ml Ops cicd pipeline GitHub
+
+10
+00:00:21,600 --> 00:00:22,600
+action so everything will get added
+
+11
+00:00:23,160 --> 00:00:24,160
+right so uh in the last tutorial we had
+
+12
+00:00:26,400 --> 00:00:27,400
+actually done the deployment in AWS
+
+13
+00:00:28,320 --> 00:00:29,320
+Beanstalk now in this video we will
+
+14
+00:00:30,900 --> 00:00:31,900
+consider a project and we'll try to
+
+15
+00:00:32,279 --> 00:00:33,279
+deploy that in the Azure but before I go
+
+16
+00:00:34,800 --> 00:00:35,800
+ahead I really want to give a quick
+
+17
+00:00:36,899 --> 00:00:37,899
+shout out to one of the subscriber his
+
+18
+00:00:39,480 --> 00:00:40,480
+name is utkarsh okay so utkarsh guy quad
+
+19
+00:00:43,140 --> 00:00:44,140
+so what he has done is that after
+
+20
+00:00:44,280 --> 00:00:45,280
+learning from this entire project right
+
+21
+00:00:46,079 --> 00:00:47,079
+now uh he has actually created a new
+
+22
+00:00:48,899 --> 00:00:49,899
+project with respect to a new data set
+
+23
+00:00:50,820 --> 00:00:51,820
+and the data set over here that he's
+
+24
+00:00:53,460 --> 00:00:54,460
+specifically using and the problem
+
+25
+00:00:54,660 --> 00:00:55,660
+statement is he's using is something
+
+26
+00:00:56,280 --> 00:00:57,280
+called as gemstone price prediction now
+
+27
+00:00:59,340 --> 00:01:00,340
+in this gemstone price is prediction we
+
+28
+00:01:01,620 --> 00:01:02,620
+are going to predict the price of the
+
+29
+00:01:03,059 --> 00:01:04,059
+gemstone based on features like ID carat
+
+30
+00:01:05,820 --> 00:01:06,820
+cut color Clarity depth table everything
+
+31
+00:01:08,340 --> 00:01:09,340
+right and we have to probably give the
+
+32
+00:01:10,560 --> 00:01:11,560
+uh you know find out the price so this
+
+33
+00:01:12,659 --> 00:01:13,659
+was probably from a kaggle competition
+
+34
+00:01:14,340 --> 00:01:15,340
+over here you can probably see this
+
+35
+00:01:16,320 --> 00:01:17,320
+kaggle uh entire information is given
+
+36
+00:01:18,540 --> 00:01:19,540
+about this data set amazingly
+
+37
+00:01:20,340 --> 00:01:21,340
+implemented solution most of the
+
+38
+00:01:22,979 --> 00:01:23,979
+techniques that he has used inside the
+
+39
+00:01:24,659 --> 00:01:25,659
+source folder he has basically used the
+
+40
+00:01:26,400 --> 00:01:27,400
+same project structure same folder
+
+41
+00:01:28,799 --> 00:01:29,799
+structure so if you are able to follow
+
+42
+00:01:30,960 --> 00:01:31,960
+this entire playlist he has basically
+
+43
+00:01:33,060 --> 00:01:34,060
+followed this playlist and he has
+
+44
+00:01:34,920 --> 00:01:35,920
+created all these things see data
+
+45
+00:01:36,720 --> 00:01:37,720
+transformation everything like how we
+
+46
+00:01:38,700 --> 00:01:39,700
+specifically used he has just used
+
+47
+00:01:40,619 --> 00:01:41,619
+different different features and he has
+
+48
+00:01:42,180 --> 00:01:43,180
+followed the same pattern okay so a good
+
+49
+00:01:45,119 --> 00:01:46,119
+amazing uh shout out to utkarsh for
+
+50
+00:01:48,479 --> 00:01:49,479
+doing this amazing work and sharing it
+
+51
+00:01:50,159 --> 00:01:51,159
+with the entire audience he had posted
+
+52
+00:01:52,500 --> 00:01:53,500
+in the LinkedIn so I thought of why not
+
+53
+00:01:55,079 --> 00:01:56,079
+representing this particular project I
+
+54
+00:01:57,060 --> 00:01:58,060
+will take this project now and I'll
+
+55
+00:01:58,439 --> 00:01:59,439
+deploy that in Azure again guys I'm
+
+56
+00:02:01,140 --> 00:02:02,140
+clearly saying the credit goes to
+
+57
+00:02:03,600 --> 00:02:04,600
+utkarsh for this project okay my project
+
+58
+00:02:06,240 --> 00:02:07,240
+is also there like which I had actually
+
+59
+00:02:07,860 --> 00:02:08,860
+developed it is almost similar but here
+
+60
+00:02:10,080 --> 00:02:11,080
+now what we are going to do we are going
+
+61
+00:02:11,700 --> 00:02:12,700
+to take this project and we are going to
+
+62
+00:02:13,080 --> 00:02:14,080
+do the deployment in Azure okay so
+
+63
+00:02:15,060 --> 00:02:16,060
+quickly if you go and see in the vs code
+
+64
+00:02:16,680 --> 00:02:17,680
+this is how the project structure looks
+
+65
+00:02:18,360 --> 00:02:19,360
+like you know you have your notebook
+
+66
+00:02:20,340 --> 00:02:21,340
+files EDM model training everything is
+
+67
+00:02:23,400 --> 00:02:24,400
+here and he is really really represented
+
+68
+00:02:25,739 --> 00:02:26,739
+written all the nodes very much cleanly
+
+69
+00:02:28,020 --> 00:02:29,020
+so you can definitely refer this okay ah
+
+70
+00:02:31,200 --> 00:02:32,200
+but if you want to implement it please
+
+71
+00:02:33,660 --> 00:02:34,660
+make sure that you see that entire
+
+72
+00:02:35,400 --> 00:02:36,400
+playlist okay uh already in the playlist
+
+73
+00:02:38,700 --> 00:02:39,700
+we have developed about nine tutorials
+
+74
+00:02:40,440 --> 00:02:41,440
+I'll also give the playlist link now
+
+75
+00:02:42,480 --> 00:02:43,480
+what we are going to do quickly
+
+76
+00:02:44,220 --> 00:02:45,220
+I'm going to put this particular project
+
+77
+00:02:46,319 --> 00:02:47,319
+inside my GitHub so inside my GitHub
+
+78
+00:02:48,180 --> 00:02:49,180
+I've taken the entire copy of the
+
+79
+00:02:49,560 --> 00:02:50,560
+project I did not do the fork the reason
+
+80
+00:02:52,140 --> 00:02:53,140
+I did not do the fork because I need to
+
+81
+00:02:53,580 --> 00:02:54,580
+make some changes for the deployment in
+
+82
+00:02:54,959 --> 00:02:55,959
+Azure okay now what I will do all this
+
+83
+00:02:58,140 --> 00:02:59,140
+commit is basically happened now I'll go
+
+84
+00:03:00,000 --> 00:03:01,000
+ahead and open my Azure right now in
+
+85
+00:03:02,819 --> 00:03:03,819
+Azure we are going to create a web app
+
+86
+00:03:04,860 --> 00:03:05,860
+and then we are going to do the
+
+87
+00:03:07,200 --> 00:03:08,200
+deployment please note over here all the
+
+88
+00:03:10,080 --> 00:03:11,080
+step to step process that we are going
+
+89
+00:03:11,640 --> 00:03:12,640
+to follow this will be a continuous
+
+90
+00:03:13,680 --> 00:03:14,680
+deployment mechanism that we are going
+
+91
+00:03:15,300 --> 00:03:16,300
+to follow over here so first of all I
+
+92
+00:03:17,400 --> 00:03:18,400
+will go ahead and sign in so quickly go
+
+93
+00:03:19,319 --> 00:03:20,319
+ahead and sign in over here now after
+
+94
+00:03:21,480 --> 00:03:22,480
+you sign in it will ask for your
+
+95
+00:03:23,700 --> 00:03:24,700
+username and password please do that now
+
+96
+00:03:26,220 --> 00:03:27,220
+if you really want to deploy this in a
+
+97
+00:03:28,260 --> 00:03:29,260
+Azure webs app right and we'll do it
+
+98
+00:03:30,420 --> 00:03:31,420
+with the help of GitHub actions okay
+
+99
+00:03:31,980 --> 00:03:32,980
+automatically the GitHub action will
+
+100
+00:03:33,959 --> 00:03:34,959
+also get created now first of all I will
+
+101
+00:03:36,360 --> 00:03:37,360
+go ahead and create the resource okay
+
+102
+00:03:37,860 --> 00:03:38,860
+inside the resource I will be having web
+
+103
+00:03:40,200 --> 00:03:41,200
+app so we'll go ahead and create this
+
+104
+00:03:41,940 --> 00:03:42,940
+web app now once this web app is created
+
+105
+00:03:44,760 --> 00:03:45,760
+I'm going to get this information like
+
+106
+00:03:47,340 --> 00:03:48,340
+subscription I'm probably using right
+
+107
+00:03:49,019 --> 00:03:50,019
+now ineuron Azure so over here
+
+108
+00:03:51,360 --> 00:03:52,360
+subscription one group is there you have
+
+109
+00:03:53,159 --> 00:03:54,159
+to also create it if not whatever by
+
+110
+00:03:55,620 --> 00:03:56,620
+default value is coming you use that
+
+111
+00:03:57,000 --> 00:03:58,000
+we'll create a new Resource Group let's
+
+112
+00:03:59,040 --> 00:04:00,040
+say I'm going to write test group
+
+113
+00:04:01,760 --> 00:04:02,760
+regression okay so this will be my
+
+114
+00:04:03,840 --> 00:04:04,840
+Resource Group which will create the web
+
+115
+00:04:05,459 --> 00:04:06,459
+app inside this then I have to give my
+
+116
+00:04:07,920 --> 00:04:08,920
+web app name let's say I'm writing gem
+
+117
+00:04:10,260 --> 00:04:11,260
+prediction gem price prediction okay so
+
+118
+00:04:13,439 --> 00:04:14,439
+gem price prediction this will basically
+
+119
+00:04:15,299 --> 00:04:16,299
+be my entire URL because after the
+
+120
+00:04:17,340 --> 00:04:18,340
+deployment will be looking like gem
+
+121
+00:04:18,720 --> 00:04:19,720
+prediction dot azurewebsite.net we are
+
+122
+00:04:21,419 --> 00:04:22,419
+going to do this with GitHub action
+
+123
+00:04:22,680 --> 00:04:23,680
+please note all the step by step okay
+
+124
+00:04:24,720 --> 00:04:25,720
+then right now will be in code later on
+
+125
+00:04:27,419 --> 00:04:28,419
+I'll also show you Dockers okay I will
+
+126
+00:04:29,400 --> 00:04:30,400
+try to convert this entire project into
+
+127
+00:04:30,780 --> 00:04:31,780
+Docker and then show you then uh after
+
+128
+00:04:33,720 --> 00:04:34,720
+selecting you have to select the runtime
+
+129
+00:04:35,220 --> 00:04:36,220
+in runtime I will go ahead and select
+
+130
+00:04:36,900 --> 00:04:37,900
+python 3.8 and now I will just go ahead
+
+131
+00:04:40,020 --> 00:04:41,020
+and click on next after next it will ask
+
+132
+00:04:42,840 --> 00:04:43,840
+for the GitHub action settings okay now
+
+133
+00:04:45,360 --> 00:04:46,360
+GitHub action setting is very much
+
+134
+00:04:46,860 --> 00:04:47,860
+simple just go ahead and enable it and
+
+135
+00:04:49,620 --> 00:04:50,620
+make sure that you configure with your
+
+136
+00:04:51,060 --> 00:04:52,060
+GitHub account right now I have
+
+137
+00:04:52,320 --> 00:04:53,320
+configured with my GitHub account if you
+
+138
+00:04:53,940 --> 00:04:54,940
+want to configure just click on change
+
+139
+00:04:55,620 --> 00:04:56,620
+account and it'll ask you to configure
+
+140
+00:04:57,600 --> 00:04:58,600
+from here okay so in order to sign in it
+
+141
+00:05:00,360 --> 00:05:01,360
+will ask you for the authentication just
+
+142
+00:05:01,800 --> 00:05:02,800
+go ahead and do the authentication now
+
+143
+00:05:03,780 --> 00:05:04,780
+we'll select the organization it is
+
+144
+00:05:05,160 --> 00:05:06,160
+Krishna x06 because it is inside my
+
+145
+00:05:07,699 --> 00:05:08,699
+repository my repository name is student
+
+146
+00:05:10,580 --> 00:05:11,580
+ml project regression now see what will
+
+147
+00:05:13,199 --> 00:05:14,199
+happen okay so here I will write student
+
+148
+00:05:17,460 --> 00:05:18,460
+student ml project regression right so
+
+149
+00:05:21,120 --> 00:05:22,120
+this is uh this is my GitHub right I
+
+150
+00:05:23,820 --> 00:05:24,820
+guess student ml project regression so
+
+151
+00:05:26,340 --> 00:05:27,340
+I've selected this it will be the main
+
+152
+00:05:27,660 --> 00:05:28,660
+branch now the next thing we will do
+
+153
+00:05:30,060 --> 00:05:31,060
+just go ahead and create review plus
+
+154
+00:05:31,919 --> 00:05:32,919
+create okay now in reviewer plus create
+
+155
+00:05:34,440 --> 00:05:35,440
+these are all the information that I
+
+156
+00:05:36,360 --> 00:05:37,360
+have now finally I will just go ahead
+
+157
+00:05:38,520 --> 00:05:39,520
+and click on the create button now this
+
+158
+00:05:41,160 --> 00:05:42,160
+initialization this deployment will take
+
+159
+00:05:43,080 --> 00:05:44,080
+some time uh around couple of minutes so
+
+160
+00:05:45,900 --> 00:05:46,900
+we'll wait till this deployment will
+
+161
+00:05:47,520 --> 00:05:48,520
+happen but as soon as this happened
+
+162
+00:05:49,500 --> 00:05:50,500
+right if I reload this page right there
+
+163
+00:05:52,320 --> 00:05:53,320
+will be an automatic workflow that will
+
+164
+00:05:54,120 --> 00:05:55,120
+be created and this workflow is
+
+165
+00:05:55,800 --> 00:05:56,800
+basically getting created with the help
+
+166
+00:05:57,000 --> 00:05:58,000
+of GitHub action so once you create this
+
+167
+00:05:59,220 --> 00:06:00,220
+web app you know says the deployment is
+
+168
+00:06:01,680 --> 00:06:02,680
+in progress you know automatically
+
+169
+00:06:03,660 --> 00:06:04,660
+inside this GitHub right inside this
+
+170
+00:06:05,880 --> 00:06:06,880
+GitHub repository that GitHub folder
+
+171
+00:06:07,620 --> 00:06:08,620
+workflow folder will also get created so
+
+172
+00:06:09,960 --> 00:06:10,960
+we'll wait for some time you know and
+
+173
+00:06:12,479 --> 00:06:13,479
+we'll see that how this particular
+
+174
+00:06:13,979 --> 00:06:14,979
+folder will get created uh till the
+
+175
+00:06:16,139 --> 00:06:17,139
+deployment is basically happening okay
+
+176
+00:06:17,759 --> 00:06:18,759
+so let's wait for some time
+
+177
+00:06:19,800 --> 00:06:20,800
+so finally guys the deployment is
+
+178
+00:06:21,840 --> 00:06:22,840
+complete now now see what will happen
+
+179
+00:06:23,880 --> 00:06:24,880
+once the deployment happens I will go to
+
+180
+00:06:25,979 --> 00:06:26,979
+my GitHub page and I'll just reload it
+
+181
+00:06:28,380 --> 00:06:29,380
+automatically one additional folder has
+
+182
+00:06:30,419 --> 00:06:31,419
+got created which is called as GitHub
+
+183
+00:06:31,919 --> 00:06:32,919
+workflows okay now with respect to
+
+184
+00:06:34,319 --> 00:06:35,319
+GitHub workflows right if you probably
+
+185
+00:06:36,060 --> 00:06:37,060
+go ahead and click it and if you see
+
+186
+00:06:38,340 --> 00:06:39,340
+this file right this is the yaml file
+
+187
+00:06:40,319 --> 00:06:41,319
+that is got created
+
+188
+00:06:41,759 --> 00:06:42,759
+and it is basically saying that okay
+
+189
+00:06:43,740 --> 00:06:44,740
+build and deploy python app to Azure web
+
+190
+00:06:45,960 --> 00:06:46,960
+app right on push the main branch it is
+
+191
+00:06:49,620 --> 00:06:50,620
+basically considering the main branch
+
+192
+00:06:51,060 --> 00:06:52,060
+from where the code needs to be
+
+193
+00:06:52,319 --> 00:06:53,319
+dispatched to the server then it is
+
+194
+00:06:55,139 --> 00:06:56,139
+running on Ubuntu latest you know
+
+195
+00:06:57,300 --> 00:06:58,300
+basically in the server side if you
+
+196
+00:06:59,639 --> 00:07:00,639
+probably see these steps using actions
+
+197
+00:07:01,740 --> 00:07:02,740
+checkout you know this is basically
+
+198
+00:07:03,180 --> 00:07:04,180
+going to push the Repository
+
+199
+00:07:05,100 --> 00:07:06,100
+then you have what python version is
+
+200
+00:07:07,139 --> 00:07:08,139
+there then you have
+
+201
+00:07:09,060 --> 00:07:10,060
+starting with creating this particular V
+
+202
+00:07:11,340 --> 00:07:12,340
+and V environment like how we started
+
+203
+00:07:13,080 --> 00:07:14,080
+then the source it is basically
+
+204
+00:07:14,880 --> 00:07:15,880
+activating that then it is installing
+
+205
+00:07:17,039 --> 00:07:18,039
+all the dependencies then it is
+
+206
+00:07:19,020 --> 00:07:20,020
+deploying all the artifact of the
+
+207
+00:07:21,060 --> 00:07:22,060
+deployment job okay it is going inside
+
+208
+00:07:22,979 --> 00:07:23,979
+that inside this particular environment
+
+209
+00:07:25,199 --> 00:07:26,199
+then you can see this is basically my
+
+210
+00:07:27,300 --> 00:07:28,300
+web app URL which is it is picking up
+
+211
+00:07:29,099 --> 00:07:30,099
+from the secret key I'll show you the
+
+212
+00:07:30,539 --> 00:07:31,539
+secret key also which will be completely
+
+213
+00:07:32,520 --> 00:07:33,520
+unique then you have this entire steps
+
+214
+00:07:35,699 --> 00:07:36,699
+that is basically happening to deploy
+
+215
+00:07:37,139 --> 00:07:38,139
+and automatically it has created and
+
+216
+00:07:39,419 --> 00:07:40,419
+this is also super important which is
+
+217
+00:07:40,860 --> 00:07:41,860
+called as the Publix profile now how
+
+218
+00:07:43,139 --> 00:07:44,139
+this all information is basically coming
+
+219
+00:07:44,699 --> 00:07:45,699
+because we had already authenticated
+
+220
+00:07:46,319 --> 00:07:47,319
+right and if I probably go and see in
+
+221
+00:07:48,900 --> 00:07:49,900
+the settings and there will be an option
+
+222
+00:07:50,819 --> 00:07:51,819
+of secret and variable right so here you
+
+223
+00:07:53,460 --> 00:07:54,460
+will be seeing that this particular
+
+224
+00:07:54,539 --> 00:07:55,539
+secret variable has got created right in
+
+225
+00:07:56,880 --> 00:07:57,880
+the GitHub Azure app Service public
+
+226
+00:07:58,620 --> 00:07:59,620
+profile this name right and from this
+
+227
+00:08:00,960 --> 00:08:01,960
+entire information from this this
+
+228
+00:08:03,060 --> 00:08:04,060
+particular secret key whatever
+
+229
+00:08:04,740 --> 00:08:05,740
+information is basically present that is
+
+230
+00:08:07,199 --> 00:08:08,199
+basically read inside this particular
+
+231
+00:08:09,120 --> 00:08:10,120
+workflow see inside this vertical
+
+232
+00:08:11,220 --> 00:08:12,220
+profile like you require this app
+
+233
+00:08:13,620 --> 00:08:14,620
+service publish profile it is coming
+
+234
+00:08:15,120 --> 00:08:16,120
+from there you require this deploy to
+
+235
+00:08:17,280 --> 00:08:18,280
+web out whichever web URL is there that
+
+236
+00:08:19,620 --> 00:08:20,620
+is also reading from here it is also uh
+
+237
+00:08:22,560 --> 00:08:23,560
+reading some more informations with
+
+238
+00:08:23,940 --> 00:08:24,940
+respect to that now see
+
+239
+00:08:26,099 --> 00:08:27,099
+this is what is the GitHub action is
+
+240
+00:08:27,960 --> 00:08:28,960
+doing it is creating this entire EML
+
+241
+00:08:29,879 --> 00:08:30,879
+file which will have the necessary
+
+242
+00:08:31,379 --> 00:08:32,379
+configuration
+
+243
+00:08:32,520 --> 00:08:33,520
+now you can obviously see the
+
+244
+00:08:34,260 --> 00:08:35,260
+documentation page to understand each
+
+245
+00:08:36,000 --> 00:08:37,000
+and every step like what is it deploy
+
+246
+00:08:37,860 --> 00:08:38,860
+what is the steps and all but if you
+
+247
+00:08:40,080 --> 00:08:41,080
+really want me to make a dedicated video
+
+248
+00:08:42,360 --> 00:08:43,360
+on GitHub action step by step I'm happy
+
+249
+00:08:45,120 --> 00:08:46,120
+to make it just please make sure that
+
+250
+00:08:47,399 --> 00:08:48,399
+you make this particular video reach
+
+251
+00:08:49,200 --> 00:08:50,200
+1000 likes okay if you are able to do
+
+252
+00:08:51,240 --> 00:08:52,240
+that I'll start the series with respect
+
+253
+00:08:52,620 --> 00:08:53,620
+to GitHub action and I'll just turn it
+
+254
+00:08:54,000 --> 00:08:55,000
+to uh you know probably talk about this
+
+255
+00:08:57,120 --> 00:08:58,120
+step by step like what is this
+
+256
+00:08:58,620 --> 00:08:59,620
+particular parameter is basically saying
+
+257
+00:09:00,180 --> 00:09:01,180
+what is this completely detail you will
+
+258
+00:09:01,800 --> 00:09:02,800
+try to understand okay I'm kidding you
+
+259
+00:09:03,899 --> 00:09:04,899
+don't need to give even thousand likes
+
+260
+00:09:05,580 --> 00:09:06,580
+but I will make a dedicated GitHub
+
+261
+00:09:07,560 --> 00:09:08,560
+actions video okay uh it's just to say
+
+262
+00:09:10,500 --> 00:09:11,500
+you then only you basically like or
+
+263
+00:09:12,180 --> 00:09:13,180
+share my video with everyone okay but
+
+264
+00:09:14,760 --> 00:09:15,760
+don't worry if you don't like it also I
+
+265
+00:09:17,160 --> 00:09:18,160
+will make sure that I will try to create
+
+266
+00:09:18,839 --> 00:09:19,839
+a dedicated video on this but I really
+
+267
+00:09:20,580 --> 00:09:21,580
+wanted to show step by step how this is
+
+268
+00:09:22,920 --> 00:09:23,920
+automatically getting created
+
+269
+00:09:24,660 --> 00:09:25,660
+now as soon as uh this deployment
+
+270
+00:09:27,360 --> 00:09:28,360
+happened your deployment is complete
+
+271
+00:09:28,980 --> 00:09:29,980
+right you see in the GitHub action
+
+272
+00:09:31,680 --> 00:09:32,680
+in the GitHub action you will be able to
+
+273
+00:09:34,080 --> 00:09:35,080
+see
+
+274
+00:09:34,800 --> 00:09:35,800
+all this build and deployment has
+
+275
+00:09:37,200 --> 00:09:38,200
+actually happened in the build all the
+
+276
+00:09:39,600 --> 00:09:40,600
+steps like what is the setup job in the
+
+277
+00:09:42,540 --> 00:09:43,540
+yaml file it was run action checkout
+
+278
+00:09:44,760 --> 00:09:45,760
+right so what is basically happening
+
+279
+00:09:46,200 --> 00:09:47,200
+inside this it is syncing with this
+
+280
+00:09:48,180 --> 00:09:49,180
+repository it is getting the GitHub
+
+281
+00:09:49,500 --> 00:09:50,500
+version it is basically seeing this app
+
+282
+00:09:52,500 --> 00:09:53,500
+Runner right app Runner is what that
+
+283
+00:09:54,839 --> 00:09:55,839
+automatically deployment happens
+
+284
+00:09:56,040 --> 00:09:57,040
+whenever the changes are happening it is
+
+285
+00:09:58,140 --> 00:09:59,140
+initializing the repository it is doing
+
+286
+00:09:59,880 --> 00:10:00,880
+some steps like fetching repository and
+
+287
+00:10:02,160 --> 00:10:03,160
+all all the steps you'll be able to see
+
+288
+00:10:03,839 --> 00:10:04,839
+over here then set up python version
+
+289
+00:10:06,120 --> 00:10:07,120
+this is the second step with respect to
+
+290
+00:10:07,560 --> 00:10:08,560
+the deployment that has happened then we
+
+291
+00:10:10,080 --> 00:10:11,080
+went and created a virtual environment
+
+292
+00:10:12,120 --> 00:10:13,120
+installed all the dependencies with
+
+293
+00:10:13,860 --> 00:10:14,860
+respect to requirement.txtc
+
+294
+00:10:15,420 --> 00:10:16,420
+automatically all these things are so in
+
+295
+00:10:17,399 --> 00:10:18,399
+that ml file whatever is the steps
+
+296
+00:10:19,980 --> 00:10:20,980
+written right that entire steps is
+
+297
+00:10:21,600 --> 00:10:22,600
+basically happening line by line then we
+
+298
+00:10:23,640 --> 00:10:24,640
+upload the entire artifact in the form
+
+299
+00:10:25,260 --> 00:10:26,260
+of zip file inside the cloud okay
+
+300
+00:10:28,680 --> 00:10:29,680
+the Azure Cloud so this particular step
+
+301
+00:10:30,300 --> 00:10:31,300
+has also happened Post Run checkout so
+
+302
+00:10:32,700 --> 00:10:33,700
+here also you can see that
+
+303
+00:10:34,440 --> 00:10:35,440
+whatever cleanup is required after the
+
+304
+00:10:37,140 --> 00:10:38,140
+GitHub repository has been synced with
+
+305
+00:10:39,000 --> 00:10:40,000
+the cloud and then finally we complete
+
+306
+00:10:40,800 --> 00:10:41,800
+the job after build we basically do the
+
+307
+00:10:43,200 --> 00:10:44,200
+deployment now in deployment also you
+
+308
+00:10:45,300 --> 00:10:46,300
+can see setup objects download artifacts
+
+309
+00:10:48,000 --> 00:10:49,000
+and deploy towards your web app has
+
+310
+00:10:49,860 --> 00:10:50,860
+happened so if you really want to
+
+311
+00:10:51,720 --> 00:10:52,720
+understand that particular yaml file you
+
+312
+00:10:54,060 --> 00:10:55,060
+just need to see this step by step what
+
+313
+00:10:55,500 --> 00:10:56,500
+has happened okay and then you will be
+
+314
+00:10:57,779 --> 00:10:58,779
+able to get an idea but don't worry I'll
+
+315
+00:10:59,760 --> 00:11:00,760
+make a dedicated video about GitHub
+
+316
+00:11:01,440 --> 00:11:02,440
+action because to discuss about each and
+
+317
+00:11:03,899 --> 00:11:04,899
+everything right it will take around one
+
+318
+00:11:05,279 --> 00:11:06,279
+and a half hour
+
+319
+00:11:06,480 --> 00:11:07,480
+so uh this deployment has been done and
+
+320
+00:11:09,180 --> 00:11:10,180
+your url is also ready so I'll go and
+
+321
+00:11:11,820 --> 00:11:12,820
+click with respect to GitHub action C
+
+322
+00:11:13,920 --> 00:11:14,920
+when first time I ran it became wrong
+
+323
+00:11:16,620 --> 00:11:17,620
+because there was some problem but
+
+324
+00:11:18,360 --> 00:11:19,360
+automatically you'll be able to see that
+
+325
+00:11:19,920 --> 00:11:20,920
+this has been happen and this is what is
+
+326
+00:11:21,600 --> 00:11:22,600
+My URL now once I hit this URL you'll be
+
+327
+00:11:24,779 --> 00:11:25,779
+able to see the entire project is
+
+328
+00:11:27,839 --> 00:11:28,839
+available right now I will go and hit
+
+329
+00:11:30,600 --> 00:11:31,600
+some values okay automatically and this
+
+330
+00:11:33,720 --> 00:11:34,720
+is now running in Azure web okay 43 fair
+
+331
+00:11:36,779 --> 00:11:37,779
+this this okay and I'll submit it now
+
+332
+00:11:39,720 --> 00:11:40,720
+once I submitted it will basically do
+
+333
+00:11:42,240 --> 00:11:43,240
+the prediction and here you can see
+
+334
+00:11:43,500 --> 00:11:44,500
+prediction gemstone price is one six
+
+335
+00:11:45,180 --> 00:11:46,180
+eight four one again I've kept this
+
+336
+00:11:48,240 --> 00:11:49,240
+photo because again most of the credits
+
+337
+00:11:50,880 --> 00:11:51,880
+right with respect to the project
+
+338
+00:11:52,260 --> 00:11:53,260
+implementation goes to utkarsh right so
+
+339
+00:11:54,420 --> 00:11:55,420
+that is the reason I'm putting this
+
+340
+00:11:55,800 --> 00:11:56,800
+entire URL
+
+341
+00:11:57,060 --> 00:11:58,060
+now all you have to do is that take this
+
+342
+00:11:59,339 --> 00:12:00,339
+entire repository which I will be giving
+
+343
+00:12:01,019 --> 00:12:02,019
+you and
+
+344
+00:12:03,000 --> 00:12:04,000
+I'll give my repository only where it
+
+345
+00:12:04,980 --> 00:12:05,980
+has all the information with respect to
+
+346
+00:12:06,360 --> 00:12:07,360
+cash and then use Azure web to basically
+
+347
+00:12:09,240 --> 00:12:10,240
+do the deployment now once you do the
+
+348
+00:12:11,160 --> 00:12:12,160
+deployment once you test it the next
+
+349
+00:12:12,839 --> 00:12:13,839
+thing is that please delete this okay
+
+350
+00:12:14,760 --> 00:12:15,760
+please delete the deployment because
+
+351
+00:12:16,620 --> 00:12:17,620
+there may be some additional charges
+
+352
+00:12:18,060 --> 00:12:19,060
+just for practice purpose I've actually
+
+353
+00:12:20,160 --> 00:12:21,160
+created this so that you don't have to
+
+354
+00:12:21,660 --> 00:12:22,660
+worry about it okay so uh it has got
+
+355
+00:12:24,420 --> 00:12:25,420
+deleted now what I'll do is that I will
+
+356
+00:12:26,339 --> 00:12:27,339
+also delete this okay
+
+357
+00:12:28,760 --> 00:12:29,760
+so let me do one thing and here uh this
+
+358
+00:12:33,360 --> 00:12:34,360
+is delete okay so I'm just going to
+
+359
+00:12:36,300 --> 00:12:37,300
+click on delete and I have to just type
+
+360
+00:12:38,220 --> 00:12:39,220
+the app name that is Gem price
+
+361
+00:12:40,260 --> 00:12:41,260
+prediction you need to do this otherwise
+
+362
+00:12:42,300 --> 00:12:43,300
+you don't know what will happen but
+
+363
+00:12:43,800 --> 00:12:44,800
+automatically the money will get
+
+364
+00:12:45,120 --> 00:12:46,120
+deducted because you may require a
+
+365
+00:12:46,920 --> 00:12:47,920
+credit card over here but just to show
+
+366
+00:12:48,839 --> 00:12:49,839
+you how the deployment is happening I'm
+
+367
+00:12:50,940 --> 00:12:51,940
+basically showing you this step okay
+
+368
+00:12:53,459 --> 00:12:54,459
+perfect uh this was it from my side I
+
+369
+00:12:56,160 --> 00:12:57,160
+hope you like this particular video all
+
+370
+00:12:58,260 --> 00:12:59,260
+the information will be given in the
+
+371
+00:12:59,579 --> 00:13:00,579
+description but please let me know that
+
+372
+00:13:01,139 --> 00:13:02,139
+if you require
+
+373
+00:13:02,339 --> 00:13:03,339
+how to about GitHub actions and all I
+
+374
+00:13:04,980 --> 00:13:05,980
+will try to explain each and every
+
+375
+00:13:06,120 --> 00:13:07,120
+parameter to you so yes this was it for
+
+376
+00:13:08,160 --> 00:13:09,160
+my side I will see you all in the next
+
+377
+00:13:09,660 --> 00:13:10,660
+video please make sure that you
+
+378
+00:13:11,519 --> 00:13:12,519
+subscribe share with all your friends in
+
+379
+00:13:13,620 --> 00:13:14,620
+the next upcoming videos we will also be
+
+380
+00:13:15,480 --> 00:13:16,480
+deploying talking about different
+
+381
+00:13:17,100 --> 00:13:18,100
+different deployment techniques with app
+
+382
+00:13:19,380 --> 00:13:20,380
+Runner and all and then we'll go to ml
+
+383
+00:13:21,300 --> 00:13:22,300
+flow DVC where we'll discuss about CI CD
+
+384
+00:13:23,820 --> 00:13:24,820
+pipelines also so yes this was it from
+
+385
+00:13:25,440 --> 00:13:26,440
+my side I will see you all in the next
+
+386
+00:13:26,519 --> 00:13:27,519
+video thank you
